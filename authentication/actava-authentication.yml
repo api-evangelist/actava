@@ -1,0 +1,17 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.actava.ai/cura/docs#get-a-key
+sources:
+- https://www.actava.ai/cura/docs#get-a-key
+- https://www.actava.ai/cura/docs
+- https://www.actava.ai/benchmarks/docs/quickstart
+description: Authentication methods as published on Actava.ai documentation.
+schemes:
+- type: http-bearer
+  name: Bearer
+  evidence: All requests go to the base URL below with a bearer token.
+  location: header
+  header: Authorization
+  how_to_obtain: API keys are issued by Actava.ai. Join the waitlist and we'll set you up.
+docs: https://www.actava.ai/cura/docs#get-a-key

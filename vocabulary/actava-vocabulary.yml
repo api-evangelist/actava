@@ -1,0 +1,38 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/actava-openapi.json
+vocabulary:
+  name: Actava.ai Domain Vocabulary
+  description: 'Terms declared by Actava.ai''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-16'
+  terms:
+  - term: Models
+    definition: Discover the models an API key can access.
+    tags:
+    - Resource Group
+    source: openapi/actava-openapi.json
+  - term: Chat
+    definition: Generate a model response for a conversation.
+    tags:
+    - Resource Group
+    source: openapi/actava-openapi.json
+  - term: ChatCompletion
+    definition: Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the
+      shape is unknown and is NOT a claim about the API.
+    tags:
+    - Object
+    source: openapi/actava-openapi.json#/components/schemas/ChatCompletion
+  - term: ChatCompletionRequest
+    definition: Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the
+      shape is unknown and is NOT a claim about the API.
+    tags:
+    - Object
+    source: openapi/actava-openapi.json#/components/schemas/ChatCompletionRequest
+  - term: ModelList
+    definition: Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the
+      shape is unknown and is NOT a claim about the API.
+    tags:
+    - Object
+    source: openapi/actava-openapi.json#/components/schemas/ModelList

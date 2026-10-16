@@ -1,0 +1,121 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Actava.ai Cura API",
+  "version": "1.0.0",
+  "summary": "OpenAI-compatible API for Cura 1T, Actava.ai's healthcare language model.",
+  "description": "The Cura API serves Cura 1T, Actava.ai's 1T-parameter healthcare language model, through an OpenAI-compatible interface at https://inference.actava.ai/v1. Existing OpenAI SDK code works by changing the base URL and the model id (`actava/cura-soar`).\n\n**Authentication.** Every request carries `Authorization: Bearer <API key>`. Keys are issued by Actava.ai \u2014 request access at https://forms.gle/hLfVUq1pBPRNojkj8.\n\n**Surface.** Only the two operations described here are served; any other path answers 404 with code `NO_RULE_MATCHED`. The model reasons before answering (thinking is on by default), accepts text and images, supports tool calling, streaming, JSON mode and automatic prompt caching, and has a 256K context window.\n\n**Errors.** Non-2xx responses carry a JSON envelope with a human-readable message, an error type and, where applicable, a machine-readable code. Retry 429 and 5xx with exponential backoff; fix 400s rather than retrying them.\n\nCura 1T is a research model, not a medical service, and not a substitute for a clinician. Benchmark scores do not establish safety for unsupervised clinical use.",
+  "termsOfService": "https://www.actava.ai/terms",
+  "contact": {
+   "name": "Actava.ai",
+   "url": "https://www.actava.ai/contact",
+   "email": "support@actava.ai"
+  }
+ },
+ "externalDocs": {
+  "description": "Cura API documentation",
+  "url": "https://www.actava.ai/cura/docs"
+ },
+ "servers": [
+  {
+   "url": "https://inference.actava.ai/v1",
+   "description": "Cura 1T inference gateway (OpenAI-compatible)"
+  }
+ ],
+ "security": [
+  {
+   "bearerAuth": []
+  }
+ ],
+ "tags": [
+  {
+   "name": "Models",
+   "description": "Discover the models an API key can access."
+  },
+  {
+   "name": "Chat",
+   "description": "Generate a model response for a conversation."
+  }
+ ],
+ "paths": {
+  "/models": {
+   "get": {
+    "operationId": "listModels",
+    "tags": [
+     "Models"
+    ],
+    "summary": "List available models",
+    "description": "Lists the models the calling API key can access.",
+    "externalDocs": {
+     "url": "https://www.actava.ai/cura/docs/models"
+    },
+    "responses": {
+     "200": {
+      "description": "The models this key can use.",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ModelList"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/chat/completions": {
+   "post": {
+    "operationId": "createChatCompletion",
+    "tags": [
+     "Chat"
+    ],
+    "summary": "Create a chat completion",
+    "description": "Generates a model response for a conversation.",
+    "externalDocs": {
+     "url": "https://www.actava.ai/cura/docs/api"
+    },
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ChatCompletionRequest"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "The completion.",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ChatCompletion"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "ChatCompletion": {
+    "type": "object",
+    "description": "Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the shape is unknown and is NOT a claim about the API.",
+    "x-ae-placeholder": true
+   },
+   "ChatCompletionRequest": {
+    "type": "object",
+    "description": "Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the shape is unknown and is NOT a claim about the API.",
+    "x-ae-placeholder": true
+   },
+   "ModelList": {
+    "type": "object",
+    "description": "Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the shape is unknown and is NOT a claim about the API.",
+    "x-ae-placeholder": true
+   }
+  }
+ }
+}

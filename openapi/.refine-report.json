@@ -1,0 +1,20 @@
+{
+  "provider": "actava",
+  "sources": [
+    "actava-openapi.json"
+  ],
+  "outputs": [
+    "actava-chat-api-openapi.yml",
+    "actava-models-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/actava-openapi.json"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "actava-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+2 apis, 2 total)"
+  ],
+  "skipped": []
+}

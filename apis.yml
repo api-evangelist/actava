@@ -1,23 +1,119 @@
 aid: actava
 name: Actava.ai
-description: 'Actava.ai is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://www.actava.ai/share-card.png
+description: Actava.ai provides a healthcare workflow-to-model learning platform offering AI-driven lifecycle development, compliance, and custom
+  intelligence solutions. Their suite includes model building, simulation, benchmarking, and integration with AWS Marketplace, targeting providers,
+  payers, and pharma to accelerate AI transformation and governance.
 url: https://raw.githubusercontent.com/api-evangelist/actava/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-15'
 modified: '2026-10-15'
 tags:
 - Company
-apis: []
+- AI
+- Healthcare
+- MachineLearning
+- Platform
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DataModel
+  url: data-model/actava-data-model.yml
+- type: SecurityTxt
+  url: well-known/actava-actava-security.txt
+- type: AgenticAccess
+  url: agentic-access/actava-agentic-access.yml
+- type: Spectral
+  url: rules/actava-rules.yml
+- type: Vocabulary
+  url: vocabulary/actava-vocabulary.yml
+- type: ChangeLog
+  url: changelog/actava-changelog.yml
+- type: Authentication
+  url: authentication/actava-authentication.yml
+- type: Conformance
+  url: conformance/actava-conformance.yml
+- type: LLMsTxt
+  url: llms/actava-llms.txt
+- type: WellKnown
+  url: well-known/actava-well-known.yml
+- type: Hosts
+  url: hosts/actava-hosts.yml
+- type: Vendors
+  url: vendors/actava-vendors.yml
+- type: SDKs
+  url: packages/actava-packages.yml
+- type: Packages
+  url: packages/actava-packages.yml
+- type: TermsOfService
+  url: https://www.actava.ai/terms
+- type: StatusPage
+  url: https://actava.statuspage.io
+- type: PrivacyPolicy
+  url: https://www.actava.ai/privacy
+- type: Newsroom
+  url: https://www.actava.ai/news
+- type: Leadership
+  url: https://www.actava.ai/about/team
+- type: ChangeLog
+  url: https://www.actava.ai/cura/docs/changelog
+- type: DomainSecurity
+  url: security/actava-domain-security.yml
 - type: Website
   url: https://actava.ai/
+- type: Documentation
+  url: https://www.actava.ai/cura/docs
+- type: APIReference
+  url: https://www.actava.ai/cura/docs
+- type: GettingStarted
+  url: https://www.actava.ai/products
+- type: Blog
+  url: https://www.actava.ai/news?categories=Blog
+- type: Pricing
+  url: https://www.actava.ai/aws-marketplace
+apis:
+- aid: actava:actava-models-api
+  name: Actava.ai Models API
+  description: Discover the models an API key can access.
+  humanURL: https://www.actava.ai/cura/docs
+  baseURL: https://inference.actava.ai/v1
+  tags:
+  - Models
+  properties:
+  - type: OpenAPI
+    url: openapi/actava-models-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/actava-chat-completion-schema.json
+  - type: JSONSchema
+    url: json-schema/actava-chat-completion-request-schema.json
+  - type: JSONSchema
+    url: json-schema/actava-model-list-schema.json
+- aid: actava:actava-chat-completions-api
+  name: Actava.ai Chat Completions API
+  description: Generate a model response for a conversation.
+  humanURL: https://www.actava.ai/cura/docs
+  baseURL: https://inference.actava.ai/v1
+  tags:
+  - Chat Completions
+  properties:
+  - type: OpenAPI
+    url: openapi/actava-chat-completions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/actava-chat-completion-schema.json
+  - type: JSONSchema
+    url: json-schema/actava-chat-completion-request-schema.json
+  - type: JSONSchema
+    url: json-schema/actava-model-list-schema.json
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 17
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://inference.actava.ai/v1",
+      "service-desc": [
+        {
+          "href": "https://www.actava.ai/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.actava.ai/cura/docs",
+          "type": "text/html"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://www.actava.ai/llms.txt",
+          "type": "text/plain"
+        }
+      ]
+    }
+  ]
+}

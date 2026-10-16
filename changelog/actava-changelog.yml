@@ -1,0 +1,17 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.actava.ai/cura/docs/changelog
+sources:
+- https://www.actava.ai/cura/docs/changelog
+- https://www.actava.ai/news/actava-platform-release-notes-kora-v8-september-2026
+entries:
+- breaking: false
+  highlights:
+  - Cura 1T API launch actava/cura-soar available via POST /v1/chat/completions and GET /v1/models
+  - OpenAI-compatible request/response format; Python and Node SDKs work by changing base_url
+  - Vision input (image_url parts), tool calling, and SSE streaming
+  - Automatic prompt caching — repeated prompt prefixes are served faster
+  date: '2026-07-01'
+note: Version information is not provided on the changelog page; therefore current_version is set to null and versioning scheme is absent.
+docs: https://www.actava.ai/cura/docs/changelog

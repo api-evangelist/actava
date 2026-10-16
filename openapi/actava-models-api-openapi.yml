@@ -1,0 +1,45 @@
+openapi: 3.2.0
+info:
+  title: Actava.ai Cura Models API
+  version: 1.0.0
+  summary: OpenAI-compatible API for Cura 1T, Actava.ai's healthcare language model.
+  description: The Cura API serves Cura 1T, Actava.ai's 1T-parameter healthcare language model, through an OpenAI-compatible interface at https://inference.actava.ai/v1.
+  termsOfService: https://www.actava.ai/terms
+  contact:
+    name: Actava.ai
+    url: https://www.actava.ai/contact
+    email: support@actava.ai
+servers:
+- url: https://inference.actava.ai/v1
+  description: Cura 1T inference gateway (OpenAI-compatible)
+security:
+- bearerAuth: []
+tags:
+- name: Models
+  description: Discover the models an API key can access.
+paths:
+  /models:
+    get:
+      operationId: listModels
+      tags:
+      - Models
+      summary: List available models
+      description: Lists the models the calling API key can access.
+      externalDocs:
+        url: https://www.actava.ai/cura/docs/models
+      responses:
+        '200':
+          description: The models this key can use.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelList'
+components:
+  schemas:
+    ModelList:
+      type: object
+      description: Referenced by this document but never defined in it. API Evangelist added this empty placeholder so the document resolves; the shape is unknown and is NOT a claim about the API.
+      x-ae-placeholder: true
+externalDocs:
+  description: Cura API documentation
+  url: https://www.actava.ai/cura/docs
