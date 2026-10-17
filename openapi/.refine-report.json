@@ -1,20 +1,25 @@
 {
   "provider": "actava",
   "sources": [
-    "actava-openapi.json"
+    "_original/actava-openapi.json"
   ],
   "outputs": [
     "actava-chat-api-openapi.yml",
     "actava-models-api-openapi.yml"
   ],
   "archived": [
-    "archived openapi/actava-openapi.json"
+    "deleted 1 superseded output(s) from the previous generation"
   ],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "actava-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+2 apis, 2 total)"
+    "superseded outputs removed: actava-chat-completions-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 2 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "actava-chat-completions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "actava-models-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
