@@ -85,7 +85,7 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Actava Agentic Access](https://apis.io/agentic-access/actava/actava-agentic-access/)
+- [Actava.ai Agentic Access](https://apis.io/agentic-access/actava/actava-agentic-access/)
 
 #### JSON Schema (3)
 
@@ -105,8 +105,20 @@ Spectral rulesets for the provider's contracts.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Actava Authentication](https://apis.io/security/actava/actava-authentication/)
-- [Actava Domain Security](https://apis.io/security/actava/actava-domain-security/)
+- [Actava.ai Authentication](https://apis.io/security/actava/actava-authentication/)
+- [Actava.ai Domain Security](https://apis.io/security/actava/actava-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Actava.ai Plans Pricing](https://apis.io/plans/actava/actava-plans-pricing/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Actava.ai Finops](https://apis.io/finops/actava/actava-finops/)
 
 ## Where to find this API
 
@@ -125,18 +137,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 47.2** — developing · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 49.5** — developing · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 76.8 |
+| Discoverability | 87.5 |
 | Contract quality | 52.7 |
 | Contract governance | 35.6 |
-| Operational transparency | 42.1 |
+| Operational transparency | 38.1 |
 | Developer ergonomics | 50.0 |
-| Access clarity | 31.6 |
+| Access clarity | 40.4 |
 
-**Agent readiness 20.1** — agent-aware
+**Agent readiness 20.3** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -161,6 +173,10 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | yes |
 
 **Regulatory alignment 18.4** — Health
 
